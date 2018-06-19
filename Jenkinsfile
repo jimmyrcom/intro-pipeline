@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Print thing') {
       steps {
-        echo 'Thing'
+        echo "Hello  ${MY_NAME}"
       }
     }
     stage('java') {
@@ -13,5 +13,8 @@ pipeline {
         sh 'java -version'
       }
     }
+  }
+  environment {
+    MY_NAME = 'Jimmy'
   }
 }
